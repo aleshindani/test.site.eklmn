@@ -13,7 +13,7 @@ body {
 /* Заголовок и навигация */
 header {
     position: relative; /* Позволяет использовать абсолютное позиционирование для псевдоэлемента */
-    background-image: url('/source/uploads/iStock-176816406-scaled.jpg');
+    background-image: url('./iStock-176816406-scaled.jpg');
     background-size: cover; /* Растягиваем изображение на весь контейнер */
     background-position: center; /* Центрируем изображение */
     height: 300px; /* Высота заголовка */
