@@ -20,7 +20,173 @@
             </ul>
         </nav>
     </header>
+<style>
+    /* styles.css */
 
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Светлый фон */
+    color: #333; /* Темный текст */
+}
+
+body.dark {
+    background-color: #121212; /* Темный фон */
+    color: #ffffff; /* Светлый текст */
+}
+
+/* Заголовок и навигация */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Секции */
+section {
+    padding: 20px;
+    margin: 10px auto;
+    background: #fff; /* Светлый фон секций */
+    border-radius: 5px;
+    max-width: 800px; /* Ограничение ширины секций */
+}
+
+body.dark section {
+   background-color: #1e1e1e; /* Темный фон секций */
+}
+
+/* Сетка продуктов */
+.product-grid {
+   display: flex; /* Используем Flexbox для сетки */
+   flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
+   justify-content: space-between; /* Равномерное распределение пространства */
+}
+
+.product {
+   border: 1px solid #babbbb;
+   border-radius: 5px;
+   margin-bottom: 20px;
+   padding: 10px;
+   transition: transform 0.2s; /* Анимация при наведении */
+   flex-basis: calc(30% - 15px); /* Ширина каждого товара (30% от контейнера) с учетом отступов */
+   box-sizing: border-box; /* Учитываем отступы в ширине */
+   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.22);
+}
+
+body.dark .product {
+   border-color: #444; /* Цвет границы для темной темы */
+}
+
+.product:hover {
+   transform: scale(1.05); /* Увеличение карточки при наведении */
+}
+
+.product img {
+   max-width: 100%; /* Адаптивные изображения */
+   height: auto; /* Сохранение пропорций */
+}
+
+.product h3 {
+   margin-top: 0; /* Убираем верхний отступ заголовка продукта */
+}
+
+/* Кнопка "Узнать" */
+.info-button {
+    background-color: #f3f7fe;
+  color: #3b82f6;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.info-button:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+/* Всплывающее окно для полного описания товара*/
+.modal {
+   display: none; /* Скрыто по умолчанию */
+   position: fixed; /* Оверлей на весь экран */
+   z-index: 1; /* На переднем плане */
+   left: 0;
+   top: 0;
+   width: 100%; /* Полная ширина */
+   height: 100%; /* Полная высота */
+   overflow-y:auto; /* Прокрутка по вертикали при необходимости*/
+   background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон */
+   backdrop-filter: blur(5px); /* Эффект размытия фона под модальным окном*/
+   
+}
+
+.modal-content {
+   background-color: #fefefe;
+   margin: 15% auto; /* Центрирование окна */
+   padding: 20px;
+   border-radius: 5px; /* Закругленные углы окна */
+   border: 1px solid #888;
+   width: 80%;
+}
+
+body.dark .modal-content {
+   background-color: #333333; /* Темный фон модального окна для темной темы */
+}
+
+/* Кнопка закрытия модального окна*/
+.close {
+   color:#aaa; 
+   float:right; 
+   font-size:28px; 
+   font-weight:bold; 
+}
+
+.close:hover,
+.close:focus {
+   color:black; 
+   text-decoration:none; 
+   cursor:pointer; 
+}
+
+/* Контакты и о нас */
+h2 {
+   color:#333; 
+}
+
+/* Подвал */
+footer {
+   text-align:center; 
+   padding:10px 0; 
+   background-color:#333; 
+   color:#fff; 
+}
+
+</style>
     <section id="home">
         <h2>Добро пожаловать в наш магазин!</h2>
         <p>Мы предлагаем широкий ассортимент плитки для вашего дома и бизнеса.</p>
