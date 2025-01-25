@@ -65,3 +65,7 @@ function openDeliveryModal() {
 function closeDeliveryModal() {
      document.getElementById("delivery-modal").style.display = "none";
 }
+function scrollToSection(id) {
+    const section = document.querySelector(id);
+    section.scrollIntoView({ behavior: 'smooth' });
+}
