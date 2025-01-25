@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продажа плитки</title>
+    <link rel="stylesheet" href="/STYLES/indexstyle.css"> <!-- Подключение CSS для стилей -->
+</head>
+<body>
+    <header>
+        <h1>Интернет-магазин плитки</h1>
+       
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#products">Продукты</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#delivery" onclick="openDeliveryModal()">О доставке</a></li> <!-- Новая категория -->
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Добро пожаловать в наш магазин!</h2>
+        <p>Мы предлагаем широкий ассортимент плитки для вашего дома и бизнеса.</p>
+    </section>
+
+    <section id="products">
+        <h2>Наши продукты</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="/source/uploads/756494194137462.jpg" alt="Плитка 1">
+                <h3>Плитка 1</h3>
+                <p class="short-description">Краткое описание плитки 1. Это очень качественная плитка...</p>
+                <button class="info-button" onclick="openModal('tile1')">Узнать</button>
+            </div>
+            <div class="product">
+                <img src="/source/uploads/756494194137462.jpg" alt="Плитка 2">
+                <h3>Плитка 2</h3>
+                <p class="short-description">Краткое описание плитки 2. Эта плитка идеально подходит для...</p>
+                <button class="info-button" onclick="openModal('tile2')">Узнать</button>
+            </div>
+            <div class="product">
+                <img src="/source/uploads/756494194137462.jpg" alt="Плитка 2">
+                <h3>Плитка 2</h3>
+                <p class="short-description">Краткое описание плитки 2. Эта плитка идеально подходит для...</p>
+                <button class="info-button" onclick="openModal('tile2')">Узнать</button>
+            </div>
+            <div class="product">
+                <img src="/source/uploads/756494194137462.jpg" alt="Плитка 2">
+                <h3>Плитка 2</h3>
+                <p class="short-description">Краткое описание плитки 2. Эта плитка идеально подходит для...</p>
+                <button class="info-button" onclick="openModal('tile2')">Узнать</button>
+            </div>
+            <div class="product">
+                <img src="/source/uploads/756494194137462.jpg" alt="Плитка 2">
+                <h3>Плитка 2</h3>
+                <p class="short-description">Краткое описание плитки 2. Эта плитка идеально подходит для...</p>
+                <button class="info-button" onclick="openModal('tile2')">Узнать</button>
+            </div>
+            <div class="product">
+                <img src="/source/uploads/756494194137462.jpg" alt="Плитка 2">
+                <h3>Плитка 2</h3>
+                <p class="short-description">Краткое описание плитки 2. Эта плитка идеально подходит для...</p>
+                <button class="info-button" onclick="openModal('tile2')">Узнать</button>
+            </div>
+            <!-- Добавьте больше продуктов по аналогии -->
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Наша компания занимается продажей плитки более 10 лет. Мы гарантируем высокое качество и широкий выбор.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Email: info@tilestore.ru</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+    </section>
+
+    <!-- Всплывающее окно для полного описания товара -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title"></h3>
+            <div id="modal-images"></div>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- Всплывающее окно для информации о доставке -->
+    <div id="delivery-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDeliveryModal()">&times;</span>
+            <h3>Информация о доставке</h3>
+            <p>Мы осуществляем доставку по всей стране. Сроки доставки зависят от региона и могут составлять от 3 до 10 рабочих дней.</p>
+            <!-- Добавьте дополнительную информацию о доставке, если необходимо -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Интернет-магазин плитки. Все права защищены.</p>
+    </footer>
+
+    <!-- Подключение JavaScript -->
+    <script src="/SRC/script.js"></script>
+
+</body>
+</html>
